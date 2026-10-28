@@ -1,0 +1,22 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  skill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: 校验技能结构与元数据
+        run: python3 tools/check_skill.py
+      - name: 校验 shell 脚本语法
+        run: |
+          for f in skills/*/scripts/*.sh; do
+            bash -n "$f"
+          done

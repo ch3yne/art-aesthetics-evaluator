@@ -1,0 +1,23 @@
+# OS
+.DS_Store
+
+# 强制保留配置目录（部分环境会全局忽略点目录，这里显式取反）
+!.claude/
+!.claude/**
+!.github/
+!.github/**
+.claude/**/.DS_Store
+.github/**/.DS_Store
+
+# 发布包
+dist/
+*.zip
+
+# 评测运行产生的中间产物与真实批次（保留 works/README.md 作为说明）
+works/*
+!works/README.md
+eval-work/
+reports/
+
+# 个人补充规则（本机文件，不入库、不随仓库发布）
+*.local.md

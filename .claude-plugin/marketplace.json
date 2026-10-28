@@ -1,0 +1,21 @@
+{
+  "name": "art-aesthetics-evaluator",
+  "owner": {
+    "name": "Cheyne",
+    "email": "contact@ch3yne.com"
+  },
+  "metadata": {
+    "description": "视听语言美学评测技能仓库",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "art-eval",
+      "description": "对 AI 生成视频（T2V/I2V）做视听语言美学评测：七维非评分分析、提示词契合度、P0/P0i/P1 缺陷优先级、多视频横向对比与报告生成。",
+      "source": "./",
+      "skills": [
+        "./skills/art-eval"
+      ]
+    }
+  ]
+}
